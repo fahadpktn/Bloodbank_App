@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-zb9^n2i%q_lh@!ok$89%9^wsz-fkb(=6h$zm@%3%!mh$==#ble
 DEBUG = False
 
 ALLOWED_HOSTS = [
-     ['Bloodbank_App.herokuapp.com', 'localhost', '127.0.0.1']
+     ['https://bloodbank-website.herokuapp.com/', 'localhost', '127.0.0.1']
 ]
 
 
