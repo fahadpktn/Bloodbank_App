@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container" style="margin-bottom: 150px;">
+  <div>
+    <table class="table" id="myTable">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Age</th>
+          <th scope="col">Blood Group</th>
+        </tr>
+      </thead>
+      {% for value in data %}
+
+      <tbody>
+        <tr class="bg-light">
+          <td>{{value.name}}</td>
+          <td>{{value.phone}}</td>
+          <td>{{value.age}}</td>
+          <td>{{value.blood}}</td>
+        </tr>
+      </tbody>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+{% endblock %}

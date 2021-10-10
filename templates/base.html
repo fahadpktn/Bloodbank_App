@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:description" content="Sometimes, The Blood Can Do What Money Cannot.">
+
+    <meta property="og:image" content="https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202106/World_Blood_Donor_Day_2021-1200x1280.png?zPoL_99qDxFsZr7ygc1ydEinqjuDmDgK">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:description" content="Sometimes, The Blood Can Do What Money Cannot.">
+    <meta name="description" content="Sometimes, The Blood Can Do What Money Cannot.">
+    <meta name="image" content="https://banner.holidaypng.com/20200421/xhe/logo-heart-for-world-blood-donor-day-5e9e7339032c13.74840372.png">
+    <meta name="twitter:image" content="https://banner.holidaypng.com/20200421/xhe/logo-heart-for-world-blood-donor-day-5e9e7339032c13.74840372.png">
+    <title>BloodBank</title>
+    <link rel="icon" href="https://banner.holidaypng.com/20200421/xhe/logo-heart-for-world-blood-donor-day-5e9e7339032c13.74840372.png" type="image/gif" sizes="16x16">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+    }
+    </style>
+
+  </head>
+  <!-- Image and text -->
+
+
+  <nav class="navbar navbar-expand-lg" style="background-color: rgb(156, 0, 0);">
+    <a class="navbar-brand">
+      <img
+        src="https://banner.holidaypng.com/20200421/xhe/logo-heart-for-world-blood-donor-day-5e9e7339032c13.74840372.png"
+        width="70px" 
+        alt="">
+        </a>
+      <h1 id="Blood">BloodBank</h1>
+      <style>
+        #Blood {
+          padding-right: 20px;
+          font-weight: 700;
+          color: #e6e4e4;
+
+        }
+      </style>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background: honeydew;">
+      <span class="navbar-toggler-icon" style="font-weight: bold; padding-right:50px; padding-top: 5px;">More</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="form-inline ">
+      {% if user %}
+      <a class="btn btn-outline-danger my-2 my-sm-0" style="font-weight: bold; background-color: oldlace;">{{user}}</a>
+      <a class="btn btn-danger my-2 my-sm-0" href="/logout">logout</a>
+      {% else %}
+      <a class="btn btn-danger my-2 my-sm-0" href="/">Login</a>
+      <a class="btn btn-outline-danger my-2 my-sm-0"; style="font-weight: bold; color:floralwhite;" href="/signup">SignUp</a>
+      {% endif %}
+    </form>
+  </div>
+  </nav>
+  <body class="">
+    {% block content %} {% endblock %}
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#myTable").DataTable();
+    });
+  </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+  
+
+</html>

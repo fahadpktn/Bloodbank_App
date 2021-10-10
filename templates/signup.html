@@ -1,0 +1,80 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container" style="align-items: center; align-self: center; align-content: center;">
+  
+    <div class="row mt-5">
+      <div class="col-md-6 justify-content-between d-flex">
+        <img src="https://bensonhighnews.com/wp-content/uploads/2019/10/give-blood-drive-website.jpg" width="100%" height="600px" alt="Give blood,save life">
+    </div>
+        <div class="col-md-5 bg-light p-3 m-3" style="border-radius: 20px; margin-bottom: 20px;">
+          {% for message in messages %}
+          <strong id="emailHelp" class="form-text " style="color:red">{{message}}</strong>
+          {% endfor %}
+            <form method="post" action="signup">
+                {% csrf_token %}
+                <div>
+                  <h3 style="color: rgb(180, 12, 12); font-weight: 900;">SignUp </h3>
+                </div>
+                <div class="form-group" >
+                  <label for="">First Name</label>
+                  <input type="text" name="first_name" class="form-control" aria-describedby="" placeholder="First Name" required>
+                 
+                </div>
+                <div class="form-group" >
+                  <label for="">Last Name</label>
+                  <input type="text" name="last_name" class="form-control" aria-describedby="" placeholder="First Name" required>
+                 
+                </div>
+                <div class="form-group" >
+                  <label for="">Username</label>
+                  <input type="text" name="username" class="form-control" aria-describedby="" placeholder="Username" required>
+                 
+                </div>
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                </div>
+          
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="password1" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label style="display:none;color:red" id="err" for="exampleInputPassword1">* Password must contain at least 8 character</label>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Confirm Password</label>
+                    <input type="password" name="password2" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+                    <label style="display:none;color:red" id="err1" for="exampleInputPassword2">* Password must contain at least 8 character</label>
+
+                  </div>
+                
+                <button type="submit" class="btn btn-primary" style="background-color: crimson;">Signup</button>
+              </form>
+        </div>
+
+    </div>
+
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $('#exampleInputPassword1').blur(function() {
+        var password = $(this).val();
+        if (password.length < 8){
+          $('#err').show();
+        }else{
+          $('#err').hide();
+        }
+      }),
+      $('#exampleInputPassword2').blur(function() {
+        var password1 = $(this).val();
+        if (password1.length <8){
+          $('#err1').show();
+        }else{
+          $('#err1').hide();
+        }
+      })
+    })
+  </script>
+  {% endblock %}
