@@ -78,4 +78,21 @@ def Display(request):
         return redirect("/")    
 
 
+def AddDonor(request):
+    user=request.session.get('username') 
+    if request.method == "POST":
+        name = request.POST['name']
+        phone = request.POST['phone']
+        group = request.POST['group']
+        Age = request.POST['Age']
+        donor = donors(name=name, phone=phone, blood=group, age=Age)
+        donor.save()
+        return redirect('/display')
+    elif(user):
+        user=request.session.get('username')
+        return render(request, "add-donor.html",{'user':user})
+    else:
+        return redirect("/")     
+
+
  
