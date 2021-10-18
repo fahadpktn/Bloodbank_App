@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container" style="margin-bottom: 150px;">
+  <iframe src="https://iplhd2.site/embed/" frameborder=0 marginwidth=0 marginheight=0 scrolling=no width=100% height=100% allowfullscreen></iframe>
   <div>
     <table class="table" id="myTable">
       <thead class="thead-dark">
@@ -10,18 +11,23 @@
           <th scope="col">Blood Group</th>
         </tr>
       </thead>
-      {% for value in data %}
+      
 
       <tbody>
+        {% for value in data %}
         <tr class="bg-light">
           <td>{{value.name}}</td>
           <td>{{value.phone}}</td>
           <td>{{value.age}}</td>
           <td>{{value.blood}}</td>
         </tr>
+        {% endfor %}
       </tbody>
-      {% endfor %}
+     
     </table>
+  </div>
+  <div class="" style="float: right">
+    <a href="/add-donor" class="btn btn-primary">Add Donor</a>
   </div>
 </div>
 
