@@ -28,7 +28,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = 'django-insecure-zb9^n2i%q_lh@!ok$89%9^wsz-fkb(=6h$zm@%3%!mh$==#ble'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
      ['https://bloodbank-website.herokuapp.com/', 'localhost', '127.0.0.1']
